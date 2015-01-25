@@ -1,0 +1,170 @@
+header {
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	padding:2.4rem;
+	/* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(top, #7410A8 0%, #360673 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top, #7410A8 0%, #360673 100%);
+
+/* Opera */ 
+background-image: -o-linear-gradient(top, #7410A8 0%, #360673 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #7410A8), color-stop(1, #360673));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top, #7410A8 0%, #360673 100%);
+
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to bottom, #7410A8 0%, #360673 100%);
+}
+
+h1 {
+	font-size:6rem;
+	padding-left:3rem;
+	padding-right:3rem;
+	padding-bottom:0.6rem;
+	color:white;
+	font-family:"Raleway";
+}
+
+h2 {
+
+}
+
+h3 {
+	color:#C71FD3;
+	font-family:"Raleway";
+	font-weight:300;
+	font-size:1.2rem;
+}
+
+nav {
+	display:block;
+	text-align:center;
+
+	/* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(top, #EDEDED 0%, #9E9E9E 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top, #EDEDED 0%, #9E9E9E 100%);
+
+/* Opera */ 
+background-image: -o-linear-gradient(top, #EDEDED 0%, #9E9E9E 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #EDEDED), color-stop(1, #9E9E9E));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top, #EDEDED 0%, #9E9E9E 100%);
+
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to bottom, #EDEDED 0%, #9E9E9E 100%);
+}
+
+nav ul li {
+	display:inline-block;
+	padding:0.6rem;
+	/*border-left:0.1rem solid #360673;*/
+	font-family:"Raleway";
+	color:black;
+}
+
+nav ul li:last-child {
+	/*border-right:0.1rem solid #360673;*/
+}
+
+nav ul li:first-child {
+	/*border-left:0.1rem solid #360673;*/
+}
+
+.main {
+	padding:2rem;
+	height:100%;
+	margin-left:auto;
+	margin-right:auto;
+	/* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(bottom, #EDEDED 0%, #9E9E9E 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(bottom, #EDEDED 0%, #9E9E9E 100%);
+
+/* Opera */ 
+background-image: -o-linear-gradient(bottom, #EDEDED 0%, #9E9E9E 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #EDEDED), color-stop(1, #9E9E9E));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(bottom, #EDEDED 0%, #9E9E9E 100%);
+
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to top, #EDEDED 0%, #9E9E9E 100%);
+}
+
+h2 {
+	font-family:"Raleway";
+	text-align:center;
+	padding:1.4rem;
+	font-size:1.7rem;
+}
+
+.banner {
+	background-color: rgba(255, 255, 255, 0.8);
+	width:26rem;
+	margin-left:auto;
+	margin-right:auto;
+	outline:0.1rem solid #360673;
+	margin-bottom:1rem;
+}
+
+.primary-display {
+	margin-left:auto;
+	margin-right:auto;
+	background-color: rgba(255, 255, 255, 0.8);
+	outline:0.1rem solid #360673;
+	padding:2rem;
+	width:50rem;
+}
+.information-et-al {	
+	margin-left:auto;
+	margin-right:auto;
+	font-family:"Raleway";
+}
+
+.information-et-al p {
+	padding:1rem;
+	font-size:1.2rem;
+}
+
+.buttons {
+	text-align:center;
+	padding-top:1.2rem;
+}
+
+ol li {
+	margin:1rem;
+}
+
+.link {
+	text-align:center;
+}
+
+#composers-list {
+	padding-top:2rem;
+	padding-bottom:2rem;
+	text-align:center;
+}
+
+#composers-list li {
+	width:5rem;
+	outline:0.1rem solid black;
+	height:7rem;
+	display:inline-block;
+	padding:0.2rem;
+	margin:0.2rem;
+}
+
