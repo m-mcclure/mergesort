@@ -20,10 +20,52 @@ $(document).ready(function() {
 			stravinsky	 = new Person("Igor",  	 "Stravinsky",   1882, 1971, 89);
 
 	var composers = [barber, bernstein, cage, copland, gershwin, ives, shostakovich, stravinsky];
+	var images	 	= ['images/barber.jpg', 'images/bernstein.jpg', 'images/cage.jpg', 'images/copland.jpg',
+										'images/gershwin.jpg', 'images/ives.jpg', 'images/shostakovich.jpg', 'images/stravinsky.jpg'];
 
-	
+	for (i=0; i < composers.length; i++){
+		if (composers[i].lastName === "Barber"){
+			$("#composers-list").append("<li class='li img'>" + "<img alt=barb src='images/barber.jpg'/>" + 
+																	"<div class='namePlates'><div>" + composers[i].firstName + "</div>" + 
+																	"<div>" + composers[i].lastName + "</div></div>" + "</li>");
+		}
+		else if (composers[i].lastName === "Bernstein"){
+			$("#composers-list").append("<li class='composer-image'>" + "<img alt=bernie src='images/bernstein.jpg'/>" +
+																		"<div class='namePlates'><div>" + composers[i].firstName + "</div>" + 
+																	"<div>" + composers[i].lastName + "</div></div>" + "</li>");
+		}
+		else if (composers[i].lastName === "Cage"){
+			$("#composers-list").append("<li class='composer-image'>" + "<img alt=cage src='images/cage.jpg'/>" + 
+																		"<div class='namePlates'><div>" + composers[i].firstName + "</div>" + 
+																	"<div>" + composers[i].lastName + "</div></div>" +"</li>");
+		}
+		else if (composers[i].lastName === "Copland"){
+			$("#composers-list").append("<li class='composer-image'>" + "<img alt=copl src='images/copland.jpg'/>" +
+																	"<div class='namePlates'><div>" + composers[i].firstName + "</div>" + 
+																	"<div>" + composers[i].lastName + "</div></div>" + "</li>");
+		}
+		else if (composers[i].lastName === "Gershwin"){
+			$("#composers-list").append("<li class='composer-image'>" + "<img alt=gersh src='images/gershwin.jpg'/>" + 
+																  "<div class='namePlates'><div>" + composers[i].firstName + "</div>" + 
+																	"<div>" + composers[i].lastName + "</div></div>" +"</li>");
+		}
+		else if (composers[i].lastName === "Ives"){
+			$("#composers-list").append("<li class='composer-image'>" + "<img alt=ives src='images/ives.jpg'/>" + 
+																	"<div class='namePlates'><div>" + composers[i].firstName + "</div>" + 
+																	"<div>" + composers[i].lastName + "</div></div>" +"</li>");
+		}
+		else if (composers[i].lastName === "Shostakovich"){
+			$("#composers-list").append("<li class='composer-image'>" + "<img alt=shost src='images/shostakovich.jpg'/>" + 
+																	"<div class='namePlates'><div>" + composers[i].firstName + "</div>" + 
+																	"<div>" + composers[i].lastName + "</div></div>" +"</li>");
+		}
+		else if (composers[i].lastName === "Stravinsky"){
+			$("#composers-list").append("<li class='composer-image'>" + "<img alt=strav src='images/stravinsky.jpg'/>" + 
+																	"<div class='namePlates'><div>" + composers[i].firstName + "</div>" + 
+																	"<div>" + composers[i].lastName + "</div></div>" +"</li>");
+		}
 
-
+}
 
 
 
