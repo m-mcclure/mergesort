@@ -22,6 +22,12 @@ $(document).ready(function() {
 										'images/gershwin.jpg', 'images/ives.jpg', 'images/shostakovich.jpg', 'images/stravinsky.jpg'];
 	var listArray	= ['man1', 'man2', 'man3', 'man4', 'man5', 'man6', 'man7', 'man8'];
 
+	var nums = [1,2,3,4,5,6,7,8];
+
+	//for (i=0; i < nums.length; i++) {
+	//	$("#composers-list").append("<li class='composer-element'>" + nums[i] + "</li>");
+	//}
+
 	for (i=0; i < composers.length; i++){
 		if (composers[i].lastName === "Barber"){
 			$("#composers-list").append("<li id='man1' class='composer-element'>" + "<img alt=barb src='images/barber.jpg'/>" + 
@@ -64,7 +70,7 @@ $(document).ready(function() {
 																	"<div>" + composers[i].lastName + "</div></div>" +"</li>");
 		}
 
-}
+} 
 
 	function mergeSort(array)
 {
@@ -98,17 +104,6 @@ function merge(left, right)
     return result;
     result = currentOrdering;
 }
- 
- $("#birth").on('click', function(){
-	$("#composers-list").empty();
-	composers = mergeSort(composers);
- 		
- 	for (i = 0; i < composers.length; i++) {
-
- 		$("#composers-list").append("<li id='composers-element'>" + composers[i].birthYear + "</li>");
- 	}
-
-})
 
  var shuffle = function(m) {
  		
@@ -121,18 +116,17 @@ function merge(left, right)
 			$elemA.before($elemB);
 			$(".composer-element:eq(" + elemB + ")").before($elemA);
 			if(m) {
-				setTimeout(shuffle, 100, m);
+				setTimeout(shuffle, 300, m);
 			}
 			
 	};
  
 	$("#shuffle").on("click", function() { 
-
-		shuffle(composers);
-		console.log(composers);
+		shuffle($("li").length);
 	});
 
-
-
+	$("#birth").on("click", function() {
+		mergeSort();
+	})
 
 });
