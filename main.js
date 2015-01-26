@@ -13,7 +13,7 @@ $(document).ready(function() {
 			bernstein 	 = new Person("Leonard", "Bernstein",    1918, 1990, 81, 'images/bernstein.jpg'),
 			cage				 = new Person("John",    "Cage",         1912, 1992, 79, 'images/cage.jpg'),
 			copland	 		 = new Person("Aaron",   "Copland",      1900, 1990, 90, 'images/copland.jpg'),
-			gershwin 		 = new Person("George",  "Gershwin",     1898, 1937, 38, 'images/gershwin.jpg'),
+			gershwin 		 = new Person("George",  "Gershwin",     1898, 1937, 38, 'images/gershwin2.jpg'),
 			ives 		  	 = new Person("Charles", "Ives",         1874, 1954, 79, 'images/ives.jpg'),
 			shostakovich = new Person("Dmitri",  "Shostakovich", 1906, 1975, 69, 'images/shostakovich.jpg'),
 			stravinsky	 = new Person("Igor",  	 "Stravinsky",   1882, 1971, 89, 'images/stravinsky.jpg');
