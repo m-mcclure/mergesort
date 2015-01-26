@@ -45,6 +45,7 @@ h3 {
 nav {
 	display:block;
 	text-align:center;
+	font-weight:bold;
 
 	/* IE10 Consumer Preview */ 
 background-image: -ms-linear-gradient(top, #EDEDED 0%, #9E9E9E 100%);
@@ -127,7 +128,7 @@ h2 {
 	background-color: rgba(255, 255, 255, 0.8);
 	outline:0.1rem solid #360673;
 	padding:2rem;
-	width:50rem;
+	width:58rem;
 }
 .information-et-al {	
 	margin-left:auto;
@@ -154,19 +155,16 @@ ol li {
 }
 
 #composers-list {
-	padding-top:2rem;
+	padding-top:1rem;
 	padding-bottom:2rem;
 	text-align:center;
 }
 
 #composers-list li {
-	width:5rem;
-	
+	width:6rem;
 	height:7rem;
 	display:inline-block;
-	padding:0.2rem;
-	margin:0.4rem;
-
+	margin:0rem 0.6rem 0.6rem 0.6rem;
 }
 
 #composers-list li img {
@@ -181,8 +179,11 @@ ol li {
 	outline:0.1rem solid white;
 	outline-offset:-0.2rem;
 	font-size:0.8rem;
-	padding:0.4rem;
-	width:5rem;
+	padding-top:0.5rem;
+	padding-bottom:0.5rem;
+	width:6rem;
+	margin-top:0.6rem;
 	margin-left:auto;
 	margin-right:auto;
+	text-align:center;
 }
