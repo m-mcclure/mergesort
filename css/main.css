@@ -2,6 +2,10 @@ body {
 	width:100%;
 }
 
+a {
+	text-decoration:none;
+}
+
 header {
 	margin-left:auto;
 	margin-right:auto;
@@ -50,6 +54,7 @@ nav {
 	display:block;
 	text-align:center;
 	font-weight:bold;
+	border-bottom:1px solid gray;
 
 	/* IE10 Consumer Preview */ 
 background-image: -ms-linear-gradient(top, #EDEDED 0%, #9E9E9E 100%);
