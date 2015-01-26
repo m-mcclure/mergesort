@@ -128,7 +128,7 @@ h2 {
 	background-color: rgba(255, 255, 255, 0.8);
 	outline:0.1rem solid #360673;
 	padding:2rem;
-	width:58rem;
+	width:60rem;
 }
 .information-et-al {	
 	margin-left:auto;
@@ -154,20 +154,22 @@ ol li {
 	text-align:center;
 }
 
-#composers-list {
+.composers {
 	padding-top:1rem;
 	padding-bottom:2rem;
 	text-align:center;
+	display:inline-block;
+	border: solid blue 1px;
 }
 
-#composers-list li {
+.composers li {
 	width:6rem;
 	height:7rem;
 	display:inline-block;
 	margin:0rem 0.6rem 0.6rem 0.6rem;
 }
 
-#composers-list li img {
+.composers li img {
 	width:6rem;
 	text-align:center;
 	outline:0.1rem solid black;

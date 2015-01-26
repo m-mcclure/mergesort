@@ -30,79 +30,86 @@ $(document).ready(function() {
 
 	for (i=0; i < composers.length; i++){
 		if (composers[i].lastName === "Barber"){
-			$("#composers-list").append("<li id='man1' class='composer-element'>" + "<img alt=barb src='images/barber.jpg'/>" + 
+			$("#composers-list").append("<li id='man1' data-ageAtDeath='" + composers[i].ageAtDeath + "' class='composer-element'>" + "<img alt=barb src='images/barber.jpg'/>" + 
 																	"<div class='namePlates'><div>" + composers[i].firstName + "</div>" + 
 																	"<div>" + composers[i].lastName + "</div></div>" + "</li>");
 		}
 		else if (composers[i].lastName === "Bernstein"){
-			$("#composers-list").append("<li id='man2' class='composer-element'>" + "<img alt=bernie src='images/bernstein.jpg'/>" +
+			$("#composers-list").append("<li id='man2' data-ageAtDeath='95' class='composer-element'>" + "<img alt=bernie src='images/bernstein.jpg'/>" +
 																		"<div class='namePlates'><div>" + composers[i].firstName + "</div>" + 
 																	"<div>" + composers[i].lastName + "</div></div>" + "</li>");
 		}
 		else if (composers[i].lastName === "Cage"){
-			$("#composers-list").append("<li id='man3' class='composer-element'>" + "<img alt=cage src='images/cage.jpg'/>" + 
+			$("#composers-list").append("<li id='man3' data-ageAtDeath='9' class='composer-element'>" + "<img alt=cage src='images/cage.jpg'/>" + 
 																		"<div class='namePlates'><div>" + composers[i].firstName + "</div>" + 
 																	"<div>" + composers[i].lastName + "</div></div>" +"</li>");
 		}
 		else if (composers[i].lastName === "Copland"){
-			$("#composers-list").append("<li id='man4' class='composer-element'>" + "<img alt=copl src='images/copland.jpg'/>" +
+			$("#composers-list").append("<li id='man4' data-ageAtDeath='42' class='composer-element'>" + "<img alt=copl src='images/copland.jpg'/>" +
 																	"<div class='namePlates'><div>" + composers[i].firstName + "</div>" + 
 																	"<div>" + composers[i].lastName + "</div></div>" + "</li>");
 		}
 		else if (composers[i].lastName === "Gershwin"){
-			$("#composers-list").append("<li id='man5' class='composer-element'>" + "<img alt=gersh src='images/gershwin.jpg'/>" + 
+			$("#composers-list").append("<li id='man5' data-ageAtDeath='1000' class='composer-element'>" + "<img alt=gersh src='images/gershwin.jpg'/>" + 
 																  "<div class='namePlates'><div>" + composers[i].firstName + "</div>" + 
 																	"<div>" + composers[i].lastName + "</div></div>" +"</li>");
 		}
 		else if (composers[i].lastName === "Ives"){
-			$("#composers-list").append("<li id='man6' class='composer-element'>" + "<img alt=ives src='images/ives.jpg'/>" + 
+			$("#composers-list").append("<li id='man6' data-ageAtDeath='555' class='composer-element'>" + "<img alt=ives src='images/ives.jpg'/>" + 
 																	"<div class='namePlates'><div>" + composers[i].firstName + "</div>" + 
 																	"<div>" + composers[i].lastName + "</div></div>" +"</li>");
 		}
 		else if (composers[i].lastName === "Shostakovich"){
-			$("#composers-list").append("<li id='man7' class='composer-element'>" + "<img alt=shost src='images/shostakovich.jpg'/>" + 
+			$("#composers-list").append("<li id='man7' data-ageAtDeath='60' class='composer-element'>" + "<img alt=shost src='images/shostakovich.jpg'/>" + 
 																	"<div class='namePlates'><div>" + composers[i].firstName + "</div>" + 
 																	"<div>" + composers[i].lastName + "</div></div>" +"</li>");
 		}
 		else if (composers[i].lastName === "Stravinsky"){
-			$("#composers-list").append("<li id='man8' class='composer-element'>" + "<img alt=strav src='images/stravinsky.jpg'/>" + 
+			$("#composers-list").append("<li id='man8' data-ageAtDeath='800' class='composer-element'>" + "<img alt=strav src='images/stravinsky.jpg'/>" + 
 																	"<div class='namePlates'><div>" + composers[i].firstName + "</div>" + 
 																	"<div>" + composers[i].lastName + "</div></div>" +"</li>");
 		}
 
 } 
 
-	function mergeSort(array)
-{
-    if (array.length < 2)
-        return array;
+function mergeSort($ul, property) {
+    if ($ul.find("li").length < 2)
+      return $ul;
  
-    var middle = parseInt(array.length / 2);
-    var left   = array.slice(0, middle);
-    var right  = array.slice(middle, array.length);
- 
-    return merge(mergeSort(left), mergeSort(right));
+ 		splitUl($ul);
+ 		var $newUl = $ul.next();
+
+    return merge(mergeSort($ul, property), mergeSort($newUl, property), property);
 }
+
+function splitUl($ul) {
+  var $secondUl  = $("<ul class='composers'></ul>");
+  var length = $ul.children().length;
+  $secondUl.append($ul.children().eq(length/2-1).nextAll());
+  $secondUl.insertAfter($ul);
+}
+
  
-function merge(left, right)
-{
-    var result = [];
+function merge($leftUl, $rightUl, property) {
+    var $resultUl = $("<ul class='composers'></ul>");
  
-    while (left.length && right.length) {
-        if (left[0] <= right[0]) {
-            result.push(left.shift());
+    while ($leftUl.children().length && $rightUl.children().length) {
+        if ($leftUl.children().first().data(property) <= $rightUl.children().first().data(property)) {
+            $resultUl.append($leftUl.children().first());
         } else {
-            result.push(right.shift());
+            $resultUl.append($rightUl.children().first());
         }
     }
  
-    while (left.length)
-        result.push(left.shift());
-    while (right.length)
-        result.push(right.shift());
+    while ($leftUl.children().length)
+        $resultUl.append($leftUl.children().first());
+    while ($rightUl.children().length)
+        $resultUl.append($rightUl.children().first());
  
-    return result;
-    result = currentOrdering;
+ 		$resultUl.insertBefore($leftUl);
+ 		$leftUl.remove();
+ 		$rightUl.remove();
+    return $resultUl;
 }
 
  var shuffle = function(m) {
@@ -116,17 +123,26 @@ function merge(left, right)
 			$elemA.before($elemB);
 			$(".composer-element:eq(" + elemB + ")").before($elemA);
 			if(m) {
-				setTimeout(shuffle, 300, m);
+				setTimeout(shuffle, 150, m);
 			}
 			
 	};
  
 	$("#shuffle").on("click", function() { 
 		shuffle($("li").length);
+		
 	});
 
 	$("#birth").on("click", function() {
-		mergeSort();
+		mergeSort($("ul#composers-list"), "birthYear");
+	})
+
+	$("#death").on("click", function() {
+		mergeSort($("ul#composers-list"), "deathYear");
+	})
+
+	$("#age-at-death").on("click", function() {
+		mergeSort($("ul#composers-list"), "ageAtDeath");
 	})
 
 });
