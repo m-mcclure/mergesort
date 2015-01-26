@@ -90,15 +90,15 @@ function merge($leftUl, $rightUl, property) {
 	});
 
 	$("#birth").on("click", function() {
-		mergeSort($("ul#composers-list"), "birthyear");
+		mergeSort($("ul.composers"), "birthyear");
 	})
 
 	$("#death").on("click", function() {
-		mergeSort($("ul#composers-list"), "deathyear");
+		mergeSort($("ul.composers"), "deathyear");
 	})
 
 	$("#age-at-death").on("click", function() {
-		mergeSort($("ul#composers-list"), "ageatdeath");
+		mergeSort($("ul.composers"), "ageatdeath");
 	})
 
 });

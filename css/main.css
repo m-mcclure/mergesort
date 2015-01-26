@@ -159,7 +159,7 @@ ol li {
 	padding-bottom:2rem;
 	text-align:center;
 	display:inline-block;
-	border: solid blue 1px;
+	/*border: solid blue 1px;*/
 }
 
 .composers li {
